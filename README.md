@@ -172,7 +172,7 @@ Selected controller gains:
 ```matlab
 Kp = 40
 Ki = 5
-Kd = 10
+Kd = 12
 ```
 
 These values provided a good balance between:
