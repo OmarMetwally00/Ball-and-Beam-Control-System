@@ -307,21 +307,25 @@ One of the most important contributions of this project is the comparison betwee
 
 # Finite Element Analysis (FEA)
 
-## Stress Distribution
+## Connecting Link Displacement
 
-<p align="center">
-  <img src="Images/FEA_Stress.png" width="800">
-</p>
+<img src="Results/Figure_05_Connecting_Link_Displacement.jpg" width="800">
 
----
+## Connecting Link Stress Distribution
 
-## Displacement Analysis
+<img src="Results/Figure_06_Connecting_Link_Stress.jpg" width="800">
 
-<p align="center">
-  <img src="Images/FEA_Displacement.png" width="800">
-</p>
+## Mesh and Boundary Conditions
 
-The structural analysis confirmed adequate strength and acceptable deformation under operating conditions.
+<img src="Results/Figure_07_Mesh_and_Boundary_Conditions.jpg" width="800">
+
+## Beam Stress Distribution
+
+<img src="Results/Figure_08_Beam_Stress.jpg" width="800">
+
+## Beam Displacement Distribution
+
+<img src="Results/Figure_09_Beam_Displacement.jpg" width="800">
 
 ---
 
