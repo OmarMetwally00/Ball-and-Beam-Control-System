@@ -46,7 +46,7 @@ This project presents the complete development cycle of a real Ball and Beam pro
 # Hardware Prototype
 
 <p align="center">
-  <img src="Images/Final_Prototype.jpg" width="700">
+  <img src="Images/Final_Prototype.jpeg" width="700">
 </p>
 
 The physical prototype was developed and experimentally validated using:
@@ -63,7 +63,7 @@ The physical prototype was developed and experimentally validated using:
 # CAD Design
 
 <p align="center">
-  <img src="Images/CAD_Model.png" width="900">
+  <img src="Images/CAD_Model.jpeg" width="900">
 </p>
 
 The complete mechanical assembly was designed and validated before fabrication.
@@ -109,7 +109,7 @@ HC-SR04 Sensor
 # Electronic Circuit
 
 <p align="center">
-  <img src="Images/Circuit_Diagram.png" width="900">
+  <img src="Images/Circuit_Diagram.jpeg" width="900">
 </p>
 
 The control system consists of an Arduino Uno, MG995 servo motor, HC-SR04 ultrasonic sensor, voltage regulation stage, and external power supply.
@@ -150,7 +150,7 @@ This characteristic requires feedback control to stabilize the ball position.
 The open-loop response demonstrates unstable system behavior where the ball position continuously diverges from the desired position.
 
 <p align="center">
-  <img src="Results/Figure_11_Open_Loop_Response.png" width="800">
+  <img src="Results/Figure_11_Open_Loop_Response.jpeg" width="800">
 </p>
 
 ---
@@ -160,7 +160,7 @@ The open-loop response demonstrates unstable system behavior where the ball posi
 Root locus analysis was used to investigate system stability and select suitable controller parameters.
 
 <p align="center">
-  <img src="Results/Figure_13_Root_Locus.png" width="800">
+  <img src="Results/Figure_13_Root_Locus.jpeg" width="800">
 </p>
 
 ---
@@ -189,7 +189,7 @@ These values provided a good balance between:
 The PID controller successfully stabilized the system and achieved accurate ball position tracking.
 
 <p align="center">
-  <img src="Results/Figure_12_Closed_Loop_Response.png" width="800">
+  <img src="Results/Figure_12_Closed_Loop_Response.jpeg" width="800">
 </p>
 
 ---
@@ -199,7 +199,7 @@ The PID controller successfully stabilized the system and achieved accurate ball
 ## Effect of Proportional Gain (Kp)
 
 <p align="center">
-  <img src="Results/Figure_14_Kp_Effect.png" width="800">
+  <img src="Results/Figure_14_Kp_Effect.jpeg" width="800">
 </p>
 
 Increasing Kp improves response speed but may increase overshoot.
@@ -209,7 +209,7 @@ Increasing Kp improves response speed but may increase overshoot.
 ## Effect of Integral Gain (Ki)
 
 <p align="center">
-  <img src="Results/Figure_15_Ki_Effect.png" width="800">
+  <img src="Results/Figure_15_Ki_Effect.jpeg" width="800">
 </p>
 
 Increasing Ki reduces steady-state error and improves tracking accuracy.
@@ -219,7 +219,7 @@ Increasing Ki reduces steady-state error and improves tracking accuracy.
 ## Effect of Derivative Gain (Kd)
 
 <p align="center">
-  <img src="Results/Figure_16_Kd_Effect.png" width="800">
+  <img src="Results/Figure_16_Kd_Effect.jpeg" width="800">
 </p>
 
 Derivative action increases damping and reduces oscillations.
@@ -231,7 +231,7 @@ Derivative action increases damping and reduces oscillations.
 ## Open-Loop Simulink Model
 
 <p align="center">
-  <img src="Results/Figure_18_Open_Loop_Simulink.png" width="900">
+  <img src="Results/Figure_18_Open_Loop_Simulink.jpeg" width="900">
 </p>
 
 ---
@@ -239,7 +239,7 @@ Derivative action increases damping and reduces oscillations.
 ## Closed-Loop Simulink Model
 
 <p align="center">
-  <img src="Results/Figure_19_Closed_Loop_Simulink.png" width="900">
+  <img src="Results/Figure_19_Closed_Loop_Simulink.jpeg" width="900">
 </p>
 
 ---
@@ -256,7 +256,7 @@ Features:
 * Performance analysis
 
 <p align="center">
-  <img src="Results/Figure_21_Output_Distance_vs_Time.png" width="800">
+  <img src="Results/Figure_21_Output_Distance_vs_Time.jpeg" width="800">
 </p>
 
 ---
@@ -280,7 +280,7 @@ P(s) = (25.05s + 39.11) / (s² + 87.88s + 1.494 × 10⁻¹⁰)
 ## System Identification Toolbox
 
 <p align="center">
-  <img src="Results/Figure_25_System_Identification_Toolbox.png" width="800">
+  <img src="Results/Figure_25_System_Identification_Toolbox.jpeg" width="800">
 </p>
 
 ---
@@ -290,7 +290,7 @@ P(s) = (25.05s + 39.11) / (s² + 87.88s + 1.494 × 10⁻¹⁰)
 One of the most important contributions of this project is the comparison between theoretical and experimentally identified models.
 
 <p align="center">
-  <img src="Results/Figure_26_Comparison.png" width="900">
+  <img src="Results/Figure_26_Comparison.jpeg" width="900">
 </p>
 
 ---
