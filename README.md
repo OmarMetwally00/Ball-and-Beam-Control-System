@@ -46,7 +46,7 @@ This project presents the complete development cycle of a real Ball and Beam pro
 # Hardware Prototype
 
 <p align="center">
-  <img src="Images/Final_Prototype.jpeg" width="700">
+  <img src="Images/Final_Prototyp.jpeg" width="700">
 </p>
 
 The physical prototype was developed and experimentally validated using:
