@@ -1,169 +1,384 @@
 # Ball and Beam Control System
 
-A complete mechatronics control project developed at Benha University following the VDI 2206 methodology for mechatronic system design.
+<p align="center">
+  <img src="Videos/Demo.gif" width="900">
+</p>
 
-## Project Description
+## Overview
 
-The Ball and Beam system is a classical unstable control problem widely used in control engineering education and research. The objective is to accurately control the position of a rolling ball along a beam by adjusting the beam inclination angle through a servo motor and a closed-loop PID controller.
+The Ball and Beam System is a classical unstable control problem widely used in control engineering education and research. The objective is to control the position of a rolling ball along a beam by adjusting the beam inclination angle through a servo motor using a closed-loop PID controller.
 
-This project covers the entire mechatronics design cycle, including mechanical design, mathematical modeling, simulation, controller design, hardware implementation, and experimental validation.
+This project presents the complete development cycle of a real Ball and Beam prototype following the **VDI 2206 Mechatronic Design Methodology**, including:
 
----
-
-## Features
-
-- Complete mechatronic system development based on VDI 2206
-- Mechanical design and CAD modeling
-- Kinematic and dynamic analysis
-- Finite Element Analysis (FEA)
-- Mathematical modeling and transfer function derivation
-- PID controller design and tuning
-- MATLAB and Simulink simulation
-- Real-time implementation using Arduino Uno
-- Ultrasonic sensor-based position measurement
-- Hardware-software integration with MATLAB
-- System Identification and model validation
-- Comparison between theoretical and practical performance
+* Mechanical Design
+* CAD Modeling
+* Finite Element Analysis (FEA)
+* Mathematical Modeling
+* PID Controller Design
+* MATLAB Simulation
+* Simulink Simulation
+* Arduino-Based Real-Time Control
+* Hardware–Software Integration
+* System Identification
+* Experimental Validation
 
 ---
 
-## System Architecture
+# Project Highlights
 
-Input Reference Position
-↓
-PID Controller
-↓
-Arduino Uno
-↓
-MG995 Servo Motor
-↓
-Beam Angle Control
-↓
-Ball Motion
-↓
-HC-SR04 Sensor
-↓
-Feedback Signal
-
----
-
-## Hardware Components
-
-| Component | Purpose |
-|------------|------------|
-| Arduino Uno | Main controller |
-| MG995 Servo Motor | Beam angle actuation |
-| HC-SR04 Ultrasonic Sensor | Ball position measurement |
-| PLA Mechanical Structure | Beam and linkage assembly |
-| Voltage Regulators | Power management |
-| 12V Power Supply | System power source |
+| Feature                      | Status |
+| ---------------------------- | ------ |
+| CAD Design                   | ✅      |
+| Mechanical Analysis          | ✅      |
+| Finite Element Analysis      | ✅      |
+| Mathematical Modeling        | ✅      |
+| Transfer Function Derivation | ✅      |
+| PID Controller Design        | ✅      |
+| MATLAB Simulation            | ✅      |
+| Simulink Simulation          | ✅      |
+| Arduino Implementation       | ✅      |
+| System Identification        | ✅      |
+| Experimental Validation      | ✅      |
+| VDI 2206 Methodology         | ✅      |
 
 ---
 
-## Software Tools
+# Hardware Prototype
 
-- MATLAB
-- Simulink
-- Arduino IDE
-- System Identification Toolbox
-- SolidWorks / CAD Software
-- FEA Analysis Tools
+<p align="center">
+  <img src="Images/Final_Prototype.jpg" width="700">
+</p>
 
----
+The physical prototype was developed and experimentally validated using:
 
-## Engineering Analysis
-
-The project includes:
-
-### Mechanical Design
-- Beam and linkage mechanism design
-- Material selection
-- Structural validation
-
-### Kinematic Analysis
-- Position analysis
-- Velocity analysis
-- Acceleration analysis
-
-### Dynamic Modeling
-- Mathematical derivation using Newtonian mechanics
-- Linearization around equilibrium point
-- Transfer function development
-
-### Control System Design
-- PID controller tuning
-- Stability analysis
-- Root locus evaluation
-- Step response evaluation
-
-### Finite Element Analysis
-- Stress distribution analysis
-- Displacement analysis
-- Safety factor verification
+* Arduino Uno
+* MG995 Servo Motor
+* HC-SR04 Ultrasonic Sensor
+* Custom Mechanical Structure
+* Voltage Regulation Circuit
+* 12V Power Supply
 
 ---
 
-## Results
+# CAD Design
 
-### Theoretical Model
+<p align="center">
+  <img src="Images/CAD_Model.png" width="900">
+</p>
 
-| Parameter | Value |
-|------------|------------|
-| Overshoot | 5.43% |
-| Settling Time | 0.364 s |
-| Steady-State Error | 0 |
+The complete mechanical assembly was designed and validated before fabrication.
 
-### Achievements
+Main subsystems include:
 
-- Stable ball position control achieved
-- Successful PID implementation
-- Experimental validation completed
-- Good agreement between simulation and practical implementation
-- Real-time visualization through MATLAB
+* Beam Assembly
+* Linkage Mechanism
+* Servo Mount
+* Sensor Holder
+* Structural Base
 
 ---
 
-## Repository Structure
+# System Architecture
 
 ```text
-CAD/
-Documentation/
-MATLAB/
-Simulink/
-System_Identification/
-Arduino/
-Images/
-Videos/
+Reference Position
+        │
+        ▼
+PID Controller
+        │
+        ▼
+Arduino Uno
+        │
+        ▼
+MG995 Servo Motor
+        │
+        ▼
+Beam Angle
+        │
+        ▼
+Ball Position
+        │
+        ▼
+HC-SR04 Sensor
+        │
+        └──────────── Feedback
 ```
 
 ---
 
-## Project Gallery
+# Electronic Circuit
 
-### CAD Design
-[Insert CAD Images]
+<p align="center">
+  <img src="Images/Circuit_Diagram.png" width="900">
+</p>
 
-### FEA Analysis
-[Insert FEA Images]
-
-### Hardware Prototype
-[Insert Prototype Images]
-
-### Experimental Results
-[Insert Response Plots]
+The control system consists of an Arduino Uno, MG995 servo motor, HC-SR04 ultrasonic sensor, voltage regulation stage, and external power supply.
 
 ---
 
-## Team Members
+# VDI 2206 Engineering Workflow
 
-- Mahmoud Mohamed Shamekh
-- Omar Mahmoud Metwally
-- Youssef Mostafa Ayad
-- Ebrahim Magdy Ebrahim
+The project was developed following the VDI 2206 methodology for mechatronic systems design.
+
+This approach integrates:
+
+1. Requirements Definition
+2. Mechanical Design
+3. Electronics Design
+4. Software Development
+5. System Integration
+6. Validation and Testing
 
 ---
 
-## Supervision
+# Mathematical Modeling
+
+The Ball and Beam system behaves as a double integrator and is inherently unstable in open-loop operation.
+
+Plant Transfer Function:
+
+P(s) = 5.532 / s²
+
+This characteristic requires feedback control to stabilize the ball position.
+
+---
+
+# Control System Design
+
+## Open-Loop Behavior
+
+The open-loop response demonstrates unstable system behavior where the ball position continuously diverges from the desired position.
+
+<p align="center">
+  <img src="Results/Figure_11_Open_Loop_Response.png" width="800">
+</p>
+
+---
+
+## Root Locus Analysis
+
+Root locus analysis was used to investigate system stability and select suitable controller parameters.
+
+<p align="center">
+  <img src="Results/Figure_13_Root_Locus.png" width="800">
+</p>
+
+---
+
+## PID Controller Design
+
+Selected controller gains:
+
+```matlab
+Kp = 40
+Ki = 5
+Kd = 10
+```
+
+These values provided a good balance between:
+
+* Fast Response
+* Small Overshoot
+* Zero Steady-State Error
+* Acceptable Settling Time
+
+---
+
+## Closed-Loop Response
+
+The PID controller successfully stabilized the system and achieved accurate ball position tracking.
+
+<p align="center">
+  <img src="Results/Figure_12_Closed_Loop_Response.png" width="800">
+</p>
+
+---
+
+# PID Tuning Analysis
+
+## Effect of Proportional Gain (Kp)
+
+<p align="center">
+  <img src="Results/Figure_14_Kp_Effect.png" width="800">
+</p>
+
+Increasing Kp improves response speed but may increase overshoot.
+
+---
+
+## Effect of Integral Gain (Ki)
+
+<p align="center">
+  <img src="Results/Figure_15_Ki_Effect.png" width="800">
+</p>
+
+Increasing Ki reduces steady-state error and improves tracking accuracy.
+
+---
+
+## Effect of Derivative Gain (Kd)
+
+<p align="center">
+  <img src="Results/Figure_16_Kd_Effect.png" width="800">
+</p>
+
+Derivative action increases damping and reduces oscillations.
+
+---
+
+# Simulink Modeling
+
+## Open-Loop Simulink Model
+
+<p align="center">
+  <img src="Results/Figure_18_Open_Loop_Simulink.png" width="900">
+</p>
+
+---
+
+## Closed-Loop Simulink Model
+
+<p align="center">
+  <img src="Results/Figure_19_Closed_Loop_Simulink.png" width="900">
+</p>
+
+---
+
+# Hardware–Software Integration
+
+The PID controller was implemented on Arduino and connected to MATLAB using serial communication.
+
+Features:
+
+* Real-time data acquisition
+* Live response visualization
+* Closed-loop monitoring
+* Performance analysis
+
+<p align="center">
+  <img src="Results/Figure_21_Output_Distance_vs_Time.png" width="800">
+</p>
+
+---
+
+# System Identification
+
+Experimental data were collected from the physical prototype and processed using MATLAB System Identification Toolbox.
+
+Identified Models:
+
+Model 1
+
+P(s) = (1.625s + 2.959) / (s² + 15.09s + 12850)
+
+Model 2
+
+P(s) = (25.05s + 39.11) / (s² + 87.88s + 1.494 × 10⁻¹⁰)
+
+---
+
+## System Identification Toolbox
+
+<p align="center">
+  <img src="Results/Figure_25_System_Identification_Toolbox.png" width="800">
+</p>
+
+---
+
+# Theoretical vs Practical Validation
+
+One of the most important contributions of this project is the comparison between theoretical and experimentally identified models.
+
+<p align="center">
+  <img src="Results/Figure_26_Comparison.png" width="900">
+</p>
+
+---
+
+## Performance Comparison
+
+| Model             | Overshoot (%) | Settling Time (s) | Steady-State Error |
+| ----------------- | ------------- | ----------------- | ------------------ |
+| Theoretical Model | 5.43          | 0.364             | 0                  |
+| Practical Model 1 | 0.00          | 1005.137          | 0                  |
+| Practical Model 2 | 0.77          | 0.000             | 0                  |
+
+---
+
+# Finite Element Analysis (FEA)
+
+## Stress Distribution
+
+<p align="center">
+  <img src="Images/FEA_Stress.png" width="800">
+</p>
+
+---
+
+## Displacement Analysis
+
+<p align="center">
+  <img src="Images/FEA_Displacement.png" width="800">
+</p>
+
+The structural analysis confirmed adequate strength and acceptable deformation under operating conditions.
+
+---
+
+# Repository Structure
+
+```text
+Ball-and-Beam-Control-System
+│
+├── README.md
+│
+├── Documentation
+│   ├── Final_Report.pdf
+│   └── Project_Presentation.pdf
+│
+├── CAD
+│   ├── Assembly
+│   ├── Beam
+│   ├── Linkage
+│   └── Images
+│
+├── MATLAB
+│   ├── ballbeam.m
+│   ├── design_project.m
+│   ├── hardware_software.m
+│   └── task5.m
+│
+├── Simulink
+│   └── design_proj.slx
+│
+├── Arduino
+│   └── BallBeam_PID.ino
+│
+├── System_Identification
+│   ├── 1.sid
+│   ├── 2.sid
+│   └── ballbeam.mat
+│
+├── Images
+│
+├── Results
+│
+└── Videos
+    └── Demo.gif
+```
+
+---
+
+# Team Members
+
+* Mahmoud Mohamed Shamekh
+* Omar Mahmoud Metwally
+* Youssef Mostafa Ayad
+* Ebrahim Magdy Ebrahim
+
+---
+
+# Supervision
 
 Dr. Amro Shafik
 
@@ -171,14 +386,6 @@ Eng. Mohamed Ashraf
 
 ---
 
-## Acknowledgment
+# License
 
-We would like to express our sincere gratitude to Dr. Amro Shafik and Eng. Mohamed Ashraf for their continuous guidance, valuable feedback, and technical support throughout the development of this project.
-
-We also appreciate the collaborative efforts of all team members whose dedication and teamwork contributed significantly to the successful completion of this work.
-
----
-
-## License
-
-This repository is published for educational and academic purposes.
+This repository is published for educational, academic, and research purposes.
