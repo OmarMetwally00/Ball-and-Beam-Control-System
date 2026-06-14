@@ -329,50 +329,6 @@ One of the most important contributions of this project is the comparison betwee
 
 ---
 
-# Repository Structure
-
-```text
-Ball-and-Beam-Control-System
-│
-├── README.md
-│
-├── Documentation
-│   ├── Final_Report.pdf
-│   └── Project_Presentation.pdf
-│
-├── CAD
-│   ├── Assembly
-│   ├── Beam
-│   ├── Linkage
-│   └── Images
-│
-├── MATLAB
-│   ├── ballbeam.m
-│   ├── design_project.m
-│   ├── hardware_software.m
-│   └── task5.m
-│
-├── Simulink
-│   └── design_proj.slx
-│
-├── Arduino
-│   └── BallBeam_PID.ino
-│
-├── System_Identification
-│   ├── 1.sid
-│   ├── 2.sid
-│   └── ballbeam.mat
-│
-├── Images
-│
-├── Results
-│
-└── Videos
-    └── Demo.gif
-```
-
----
-
 # Team Members
 
 * Mahmoud Mohamed Shamekh
