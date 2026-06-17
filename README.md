@@ -22,7 +22,7 @@ This project presents the complete development cycle of a real Ball and Beam pro
 * System Identification
 * Experimental Validation
 
----
+----
 
 # Project Highlights
 
